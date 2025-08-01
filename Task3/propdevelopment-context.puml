@@ -1,0 +1,24 @@
+@startuml
+
+title Диаграмма контекста платформы "PropDevelopment"
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+Person(owner, "Собственник", "Использует мобильное для работы с 'Умным домом'")
+Person(resident1, "Жилец", "Разрешён доступ в дом")
+Person(resident2, "Жилец", "Разрешён въезд на территорию")
+
+System_Boundary(propDevelopment, "Система PropDevelopment") {
+    System(mobileApp, "Мобильное приложение", "iOS/Android")
+    System(propDevelopmentPlatform, "Платформа PropDevelopment")
+}
+
+System(smartHomeServices, "Партнёрские сервисы 'Умный дом'", "Предоставляет API для работы с домофоном и шлагбаумом")
+
+Rel(owner, mobileApp, "Использует")
+Rel(mobileApp, propDevelopmentPlatform, "Обращение к API платформы")
+Rel(propDevelopmentPlatform, smartHomeServices, "Интеграция")
+Rel(smartHomeServices, resident1, "Распознавание по биометрии")
+Rel(smartHomeServices, resident2, "Распознавание номера автомобиля")
+
+@enduml
