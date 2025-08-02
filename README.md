@@ -29,3 +29,11 @@
 [Создание пользователей](Task4/create-users.sh)
 
 [Создание и привязка ролей](Task4/create-roles.sh)
+
+
+
+### Задание 5
+
+[Создание подов и сервисов](Task5/create-services.sh)
+
+[Сетевые политики](Task5/non-admin-api-allow.yaml)
