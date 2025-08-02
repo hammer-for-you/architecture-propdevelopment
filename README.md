@@ -19,3 +19,13 @@
 [Диаграмма контейнеров](Task3/propdevelopment-containers.drawio)
 
 [Требования безопасности](Task3/propdevelopment-security-requirements.md)
+
+
+
+### Задание 4
+
+[Описание ролей](Task4/cluster-roles.md)
+
+[Создание пользователей](Task4/create-users.sh)
+
+[Создание и привязка ролей](Task4/create-roles.sh)
